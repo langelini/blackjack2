@@ -1,6 +1,5 @@
 public class dealer {
     public int carttotal;
-    public card [] cards = new card[10];
+    public card [] cards;
     public boolean isover17;
-
 }
