@@ -11,11 +11,17 @@ public class basicgameapp {
     }
     public basicgameapp() {
         System.out.println("welcome to mr. angelini's blackjack game");
-        for(int x = 0;x<13; x++){
-        card c = new card(x+1);
-        c.printall();
+        for (int l = 0;l<4;l++) {
+            int y =0;
 
-        c =  deck[x];
-    }
+            for (int x = 0; x < 13; x++) {
+                card c = new card(x + 1,y);
+                c.printall();
+
+                c = deck[x];
+                y++;
+            }
+
+        }
     }
 }
