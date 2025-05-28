@@ -5,6 +5,7 @@ public class dealer {
     public dealer(){
         carttotal = 1;
         isover17 = true;
+        cards = new card[2];
 
     }
 
@@ -12,5 +13,8 @@ public class dealer {
         System.out.println(carttotal);
         System.out.println(cards);
         System.out.println(isover17);
+        for(int x = 0; x<cards.length;x++){
+            cards[x].printall();
+        }
     }
 }

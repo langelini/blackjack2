@@ -2,17 +2,19 @@ public class player {
     public int cardtotal;
     boolean ishit;
     public card [] cards;
-    public player sammy = new player();
 
     public player() {
         cardtotal = 1;
         ishit = true;
+        cards = new card[2];
 
     }
-    public void pintall(){
+    public void printall(){
         System.out.println(cardtotal);
         System.out.println(ishit);
-        System.out.println(cards);
-        System.out.println(sammy);
+        for(int x = 0;x<cards.length; x++){
+            cards[x].printall();
+        }
+
     }
 }

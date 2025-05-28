@@ -26,7 +26,16 @@ public class basicgameapp {
             }
 
         }
+
         printdeck();
+        kat = new player();
+        kat.cards[0] = deck[(int)(Math.random()*52)];
+        kat.cards[1] = deck[(int)(Math.random()*52)];
+        kat.printall();
+        lizard = new dealer();
+        lizard.cards[0]=deck[(int)(Math.random()*52)];
+        lizard.cards[1] = deck[(int)(Math.random()*52)];
+        lizard.printall();
     }
         public void printdeck(){
             for(int x = 0; x<deck.length; x++){
