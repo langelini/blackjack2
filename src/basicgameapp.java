@@ -26,15 +26,17 @@ public class basicgameapp {
             }
 
         }
+        kat = new player();
+        lizard = new dealer();
+        shuffle();
+        deal();
 
         printdeck();
-        kat = new player();
-        kat.cards[0] = deck[(int)(Math.random()*52)];
-        kat.cards[1] = deck[(int)(Math.random()*52)];
+
+
         kat.printall();
-        lizard = new dealer();
-        lizard.cards[0]=deck[(int)(Math.random()*52)];
-        lizard.cards[1] = deck[(int)(Math.random()*52)];
+
+
         lizard.cards[0].printall();
     }
         public void printdeck(){
@@ -44,5 +46,19 @@ public class basicgameapp {
 
             }
         }
-
+        public void deal() {
+            lizard.cards[0]=deck[(int)(Math.random()*52)];
+            lizard.cards[1] = deck[(int)(Math.random()*52)];
+            kat.cards[0] = deck[(int)(Math.random()*52)];
+            kat.cards[1] = deck[(int)(Math.random()*52)];
+        }
+        public void shuffle(){
+        for(int x =0;x<deck.length;x++) {
+            Object leifs = null;
+            Object sammy = leifs;
+            Object kat;
+            int random = (int) (Math.random() * 52);
+            deck[x] = deck[random];
+        }
+        }
 }
