@@ -46,7 +46,7 @@ public class card {
             value = 9;
         }
         if(pnumber == 8){
-            number = "king";
+            number = "eight";
             value = 10;
         }
         if(pnumber == 7){

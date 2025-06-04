@@ -18,7 +18,7 @@ public class basicgameapp {
                 card c = new card(x + 1,l);
 
                 deck[counter] = c;
-                deck[counter].printall();
+             //   deck[counter].printall();
                 counter++;
 
 
@@ -28,16 +28,17 @@ public class basicgameapp {
         }
         kat = new player();
         lizard = new dealer();
+        printdeck();
         shuffle();
+
         deal();
 
-        printdeck();
 
 
-        kat.printall();
+     //   kat.printall();
 
 
-        lizard.cards[0].printall();
+       // lizard.cards[0].printall();
     }
         public void printdeck(){
             for(int x = 0; x<deck.length; x++){
@@ -54,11 +55,13 @@ public class basicgameapp {
         }
         public void shuffle(){
         for(int x =0;x<deck.length;x++) {
-            Object leifs = null;
-            Object sammy = leifs;
-            Object kat;
+//            Object leifs = null;
+//            Object sammy = leifs;
+//            Object kat = leifs;
             int random = (int) (Math.random() * 52);
+            card twin = deck[x];
             deck[x] = deck[random];
+            deck[random] = twin;
         }
         }
 }
